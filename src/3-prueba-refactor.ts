@@ -5,7 +5,7 @@ const ax = require("axios");
 const userList: any = [];
 
 // This is a function that creates a template based on specific conditions like name, id and active as variables.
-// Remember to add all possible users to the dabase
+// Remember to add all possible users to the database
 // NOTE: The table is updated in user_table for qa and dev environments
 // Some pending users will be added next week
 async function CREATE_template_Function(
@@ -35,8 +35,8 @@ async function CREATE_template_Function(
   return name + " " + id + " " + active;
 }
 
-// This is an experimiental code, testing...
-function foo(colorType) {
+// This is an experimental code, testing...
+function foo(colorType: any) {
   let result = "";
   switch (colorType) {
     case "red":
@@ -82,7 +82,7 @@ type Usser = {
   userrActive: boolean;
 };
 
-function sleep(ms) {
+function sleep(ms: number) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
