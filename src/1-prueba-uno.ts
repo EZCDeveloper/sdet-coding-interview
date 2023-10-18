@@ -1,8 +1,5 @@
 import axios from "axios";
-
-const endpoint = (): string => {
-  return "https://fakestoreapi.com/products";
-};
+import { endpoint } from "../helpers";
 
 async function getProducts(api: any) {
   const res = await axios.get(api);
