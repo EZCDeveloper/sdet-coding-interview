@@ -1,0 +1,7 @@
+// SQL
+
+// Logica
+
+// Arreglo
+
+// Iteraciones
