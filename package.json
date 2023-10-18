@@ -8,6 +8,7 @@
   "scripts": {
     "test1": "ts-node ./src/1-prueba-random.ts",
     "test2": "ts-node ./src/2-prueba-api.ts",
+    "test4": "ts-node ./src/4-prueba-general.ts",
     "start": "cypress open"
   },
   "dependencies": {
