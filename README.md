@@ -82,5 +82,5 @@ b. No deben venir números duplicados.
 
 Una vez finalizado, ejecute el comando `npm run test4`
 
-Respuesta esperado: [ 1, 2, 9, 10, 16, 98 ]
+Resultado esperado: [ 1, 2, 9, 10, 16, 98 ]
 

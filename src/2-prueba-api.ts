@@ -1,5 +1,5 @@
-// import axios from "axios";
-// import expect from "expect";
+import axios from "axios";
+import expect from "expect";
 
 require('dotenv').config()
 
