@@ -1,43 +1,86 @@
+# Prueba de Codificación
+
+### REQUISITOS
+
 1. Clonar el repositorio: https://github.com/ycl-xepelin/sdet-coding-interview
-2. Crear una rama que se llame sdet-test
-(En caso que no tenga GIT instalado, se le puede pasar el proyecto .zip)
 
-3. Ejecutar el comando npm install para descargar las dependencias 
+2. Crear una rama que se llame `sdet-test/{nombre}`
 
-4. Ejecutar el comando npm run test1 buscar donde se encuentra el error y corregirlo. 
+3. Ejecutar el comando `npm install` para descargar las dependencias 
 
-    Resultado esperado: No se debe presentar ningún error en la consola y se debe desplegar un object con datos.
 
-5. Automatizar una prueba de API con Axios. 
+
+### PRUEBA 1 - ANÁLISIS DE ERROR Y SOLUCIÓN DE PROBLEMAS (3 minutos)
+
+
+- Ejecutar el comando `npm run test1` buscar donde se encuentra el error y corregirlo. 
+
+Resultado esperado: No se debe presentar ningún error y se debe desplegar un objeto con datos en la consola.
+
+
+### PRUEBA 2 - CONOCIMIENTO DE API Y AUTOMATIZACIÓN BÁSICA (10 minutos)
+
+- Automatizar una prueba de API con Axios. 
+
 En el archivo 2-prueba-api.ts use lo siguiente:
 
-        BASE URL: https://fakestoreapi.com
-        ENDPOINT: /auth/login
-        USER: mor_2314
-        PASSWORD: 83r5^_
+- BASE_URL: https://fakestoreapi.com
+- ENDPOINT: /auth/login
+- USER_TEST: mor_2314
+- PASSWORD: 83r5^_
+- Payload:
+{
+  username: '',
+  password: '',
+}
 
-        Payload:
-        {
-        username: '',
-        password: '',
-        }
 
-    a. Definir el BASE_URL, USER y PASSWORD en el archivo .env para usarlo en el test.
+a. Crear una función asíncrona enviando un POST request con Axios. 
 
-    b. Crear una función asíncrona enviando un POST request con Axios. 
-        Syntaxis: axios.post(<api endpoint>, <payload>)
+    Syntaxis:  axios.post({endpoint}, {payload})
 
-    c. Imprimir el "token" desde el response data con console.log
+b. Imprimir el "token" desde el response data
 
-    d. Comparar el status code del response que sea igual a 200 usando expect.
+c. Comparar el status code del response igual a 200.
 
-6. Buscar todos los posibles refactors y mejoras de 3-prueba-refactor.ts
+Una vez finalizado, ejecute el comando `npm run test2`
 
-    Resultado esperado:  Existen al menos 15 mejoras en este código.
 
-7. Automatizar una prueba Web con la página de Google. 
+Resultado esperado: Se debe ejecutar la prueba con éxito y cumpliendo las condiciones a, b, y c.
+
+
+
+
+### PRUEBA 3 - REFACTORIZACIÓN DE CÓDIGO (8 minutos)
+
+- Buscar todos las refactorizaciones y mejoras posibles de 3-prueba-refactor.ts
+
+Resultado esperado:  Existen al menos 15 mejoras en este código.
+
+
+
+
+### PRUEBA 4 - WEB TESTING (10 mins)
+
+- Automatizar una prueba Web con la página de Google. 
 Los detalles se encuentran en el archivo cypress/e2e/cypress-interview.cy.js
+
+	Una vez finalizado, ejecute el comando `npm start` para ejecutar el test.
 
 	Resultado esperado:  Se debe poder ejecutar la prueba automatizada de forma exitosa.
 
-8. Completar la prueba 4-prueba-general.ts
+
+
+
+### PRUEBA 5 - LÓGICA Y ALGORITMO (15 mins)
+
+
+Completar la prueba 4-prueba-general.ts
+
+a. Debes ordenar los números de menor a mayor.
+b. No deben venir números duplicados.
+
+Una vez finalizado, ejecute el comando `npm run test4`
+
+Respuesta esperado: [ 1, 2, 9, 10, 16, 98 ]
+
