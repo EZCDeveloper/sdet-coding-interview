@@ -7,7 +7,7 @@ describe("Xepelin Interview", () => {
 
   it("Search on Google page", () => {
     // 1. Insertar los locators de los 3 elementos que se encuentra en el archivo “google-page.ts” en la carpeta fixtures/page-objects
-    
+
     // 2. Importar el page-object Google Page
     
     // 3. Usar el elemento "SearchTextBox" para verificar que sea visible e insertar un texto "Xepelin" en el campo

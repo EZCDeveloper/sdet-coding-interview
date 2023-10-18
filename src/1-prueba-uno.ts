@@ -1,8 +1,12 @@
 import axios from "axios";
 
-async function pruebaUno() {
-  const res = await axios.get("https://fakestoreapi.com/products");
-  console.log(res.data);
+const endpoint = (): string => {
+  return "https://fakestoreapi.com/products";
+};
+
+async function getProducts(api: any) {
+  const res = await axios.get(api);
+  console.log(res.status);
 }
 
-pruebaUno();
+getProducts(endpoint);
