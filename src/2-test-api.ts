@@ -3,8 +3,8 @@ import expect from "expect";
 
 require('dotenv').config()
 
-async function pruebaApi() {
+async function testApi() {
 
 }
 
-pruebaApi();
+testApi();

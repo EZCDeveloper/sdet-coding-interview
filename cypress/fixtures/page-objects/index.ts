@@ -1,1 +1,0 @@
-export { default as GooglePage } from './google-page';
