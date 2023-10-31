@@ -1,6 +1,5 @@
 cypress/integration/examples
 cypress.env.json
-node_modules
 
 /cypress/videos
 /cypress/screenshots
@@ -10,3 +9,10 @@ node_modules
 .idea
 .npmrc
 /.lh
+
+node_modules/
+*.log
+*.tmp
+log/*
+test-results/
+*.html
