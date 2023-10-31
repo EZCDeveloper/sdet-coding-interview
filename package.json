@@ -6,7 +6,7 @@
   "author": "Xepelin",
   "license": "MIT",
   "scripts": {
-    "test1": "ts-node ./src/1-test-error-random.ts",
+    "test1": "ts-node ./src/1-test-error-analytics.ts",
     "test2": "ts-node ./src/2-test-api.ts",
     "test4": "ts-node ./src/4-test-logic.ts",
     "start": "cypress open"
