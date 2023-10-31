@@ -1,18 +1,6 @@
 cypress/integration/examples
 cypress.env.json
-
-/cypress/videos
-/cypress/screenshots
-./cypress/downloads/*
-./cypress/reports/*
-.vscode
-.idea
-.npmrc
+.env
 /.lh
+/node_modules
 
-node_modules/
-*.log
-*.tmp
-log/*
-test-results/
-*.html
