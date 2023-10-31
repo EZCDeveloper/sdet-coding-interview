@@ -35,3 +35,15 @@
 //     }
 //   }
 // }
+
+/**
+ * Get all the string element from a table, iterating over them.
+ * Then, make assertions.
+ * @param h: string element from the header
+ * @param index: element's position caught
+ */
+export const getTableHeaders = (tableDataName: any) => {
+  cy.get('th').each((item, index) => {
+    cy.wrap(item).should('contain.text', tableDataName[index]);
+  });
+};

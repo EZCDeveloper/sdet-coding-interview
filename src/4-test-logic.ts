@@ -1,12 +1,20 @@
 const numList = [98, 1, 2, 10, 2, 9, 16];
 
-function sortArray(arr: any) {
-  numList.sort(function (a, b) {
-    if (a > b) return 1;
-    if (a < b) return -1;
-    return 0;
+function ordenarYEliminarDuplicados(arr: any) {
+  // We sort the array from minor to mayor
+  arr.sort(function (a: any, b: any) {
+    return a - b;
   });
-  console.log(numList);
+
+  // Delete duplicated elements
+  const arraySinDuplicados = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i + 1]) {
+      arraySinDuplicados.push(arr[i]);
+    }
+  }
+
+  console.log(arraySinDuplicados);
 }
 
-sortArray(numList);
+ordenarYEliminarDuplicados(numList);
