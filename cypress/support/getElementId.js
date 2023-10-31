@@ -5,9 +5,9 @@
  * @param index: element's position caught
  */
 export const getSalaryAmount = tableData => {
-  cy.get('tbody tr td')
-    .eq(2)
+  cy.get('[id="htmlTableId"]')
+    .find('td:nth-child(3)')
     .each((item, index) => {
-      cy.wrap(item).should('contain.text', tableData[index]);
+      cy.wrap(item).should('include.text', tableData[index]);
     });
 };
