@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/4-test-logic.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1698768708763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698768719168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n const numList = [98, 1, 2, 10, 2, 9, 16];\n \n function sortArray(arr: any) {\n-  numList.sort(function(a +b ) {\n-      if (a > b) return 1\n-      if (a< b) return -1\n-    return 0\n+  numList.sort(function (a, b) {\n+    if (a > b) return 1;\n+    if (a < b) return -1;\n+    return 0;\n   });\n }\n \n sortArray(numList);\n"
+                },
+                {
+                    "date": 1698768828305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   numList.sort(function (a, b) {\n     if (a > b) return 1;\n     if (a < b) return -1;\n     return 0;\n+    console.log(numList);\n   });\n }\n \n sortArray(numList);\n"
+                },
+                {
+                    "date": 1698768851987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   numList.sort(function (a, b) {\n     if (a > b) return 1;\n     if (a < b) return -1;\n     return 0;\n-    console.log(numList);\n   });\n+  console.log(numList);\n }\n \n sortArray(numList);\n"
+                }
+            ],
+            "date": 1698768708763,
+            "name": "Commit-0",
+            "content": "const numList = [98, 1, 2, 10, 2, 9, 16];\n\nfunction sortArray(arr: any) {\n  numList.sort(function(a +b ) {\n      if (a > b) return 1\n      if (a< b) return -1\n    return 0\n  });\n}\n\nsortArray(numList);\n"
+        }
+    ]
+}
