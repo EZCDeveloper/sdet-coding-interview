@@ -1,0 +1,62 @@
+{
+    "sourceFile": "cypress/e2e/cypress-interview.cy.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1698767130855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698767234685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /// <reference types=\"cypress\" />\n \n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n-    cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/');\n+    cy.visit('/');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767460391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n \n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n+    cy.contains('he', 'HTML Table with unique id');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767498532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n-    cy.contains('he', 'HTML Table with unique id');\n+    cy.contains('h2', 'HTML Table with unique id');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767531102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n-    cy.contains('h2', 'HTML Table with unique id');\n+    cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767617803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n+    cy.get('[id=\"htmlTableId\"]').should('exist');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767708429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n-    cy.get('[id=\"htmlTableId\"]').should('exist');\n+    cy.get('[id=\"htmlTableId\"]').contains('$150,000+');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767814862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,10 @@\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n-    cy.get('[id=\"htmlTableId\"]').contains('$150,000+');\n+    cy.get('[id=\"htmlTableId\"]')\n+      .contains('$150,000+')\n+      .and('contain.text', '$120,000+')\n+      .and('contain.text', '$120,000+');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767909511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n     cy.get('[id=\"htmlTableId\"]')\n       .contains('$150,000+')\n-      .and('contain.text', '$120,000+')\n-      .and('contain.text', '$120,000+');\n+      .and('contain', '$120,000+')\n+      .and('contain', '$50,000+');\n   });\n });\n"
+                },
+                {
+                    "date": 1698767997553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n-    cy.get('[id=\"htmlTableId\"]')\n-      .contains('$150,000+')\n-      .and('contain', '$120,000+')\n-      .and('contain', '$50,000+');\n+    cy.get('[id=\"htmlTableId\"]').contains('$150,000+');\n+    cy.get('[id=\"htmlTableId\"]').contains('$120,000+');\n+    cy.get('[id=\"htmlTableId\"]').contains('$50,000+');\n   });\n });\n"
+                },
+                {
+                    "date": 1698768109970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n-    cy.get('[id=\"htmlTableId\"]').contains('$150,000+');\n-    cy.get('[id=\"htmlTableId\"]').contains('$120,000+');\n-    cy.get('[id=\"htmlTableId\"]').contains('$50,000+');\n+    cy.get('[id=\"htmlTableId\"]').as('table1').contains('$150,000+');\n+    cy.get('@table1').contains('$120,000+');\n+    cy.get('@table1').contains('$50,000+');\n   });\n });\n"
+                },
+                {
+                    "date": 1698768187150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n /// <reference types=\"cypress\" />\n \n+const softwareDevSalaray = '$150,000+';\n+\n describe('Cypress interview', () => {\n   it('Locate the salary table', () => {\n     cy.visit('/');\n     cy.contains('h2', 'HTML Table with unique id').should('be.visible');\n-    cy.get('[id=\"htmlTableId\"]').as('table1').contains('$150,000+');\n+    cy.get('[id=\"htmlTableId\"]').as('table1').contains(softwareDevSalaray);\n     cy.get('@table1').contains('$120,000+');\n     cy.get('@table1').contains('$50,000+');\n   });\n });\n"
+                }
+            ],
+            "date": 1698767130855,
+            "name": "Commit-0",
+            "content": "/// <reference types=\"cypress\" />\n\ndescribe('Cypress interview', () => {\n  it('Locate the salary table', () => {\n    cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/');\n  });\n});\n"
+        }
+    ]
+}

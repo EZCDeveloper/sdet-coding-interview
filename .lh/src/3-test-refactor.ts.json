@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/3-test-refactor.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698767225656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698767225656,
+            "name": "Commit-0",
+            "content": "import axios from 'axios';\n\nconst ax = require('axios');\n\nconst userList: any = [];\n\n// This is a function that creates a template based on specific conditions like name, id and active as variables.\n// Remember to add all possible users to the database\n// NOTE: The table is updated in user_table for qa and dev environments\n// Some pending users will be added next week\n//TODO: Evoid nested if. Use forEach, ex functio ? xxxx  : YYYY\nasync function CREATE_template_Function(\n  name: any,\n  id: any,\n  active: any\n): Promise<string> {\n  // This is a condition for name\n  if (!name.includes(' ')) {\n    // name must be full name, this includes last name\n    console.log('WARNING!');\n    console.log('Name must be full name. Last name is required');\n    console.log('Exit!');\n  } // This is a condition for number\n  else if (isNaN(id)) {\n    // id cannot be zero or negative\n    console.log('WARNING!');\n    console.log('id must be a number');\n    console.log('Exit!');\n  } // This is a condition for boolean\n  else if ((active = true)) {\n    // active depends on the status\n    console.log('User is active!');\n  } else {\n    // do something...\n  }\n  return name + ' ' + id + ' ' + active;\n}\n\n//TODO: for each function. Move to utils.\n// This is an experimental code, testing...\nfunction foo(colorType: any) {\n  let result = '';\n  switch (colorType) {\n    case 'red':\n      result = 'good';\n    case 'blue':\n      result = 'good';\n    case 'white':\n      result = 'bad';\n    case 'black':\n      result = 'bad';\n  }\n  return result;\n}\n\n//TODO: move to utils. Clean code.\nfunction mainFunction() {\n  let user1: any = CREATE_template_Function('Maria', 1, true);\n  sleep(3000);\n  let user4: any = CREATE_template_Function('David', 4, false);\n  sleep(3000);\n  let user5: any = CREATE_template_Function('Steve', 5, true);\n  sleep(3000);\n  let user2: any = CREATE_template_Function('Pedro', 2, false);\n  sleep(3000);\n  let user3: any = CREATE_template_Function('Jesus', 3, true);\n\n  userList.push(user1);\n  userList.push(user2);\n  userList.push(user3);\n  userList.push(user4);\n  userList.push(user5);\n\n  // Reset all users as null\n  user1 = null;\n  user2 = null;\n  user3 = null;\n  user4 = null;\n  user5 = null;\n}\n\ntype Usser = {\n  userNamee: string;\n  userId: number;\n  userrActive: boolean;\n};\n\nfunction sleep(ms: number) {\n  return new Promise(resolve => {\n    setTimeout(resolve, ms);\n  });\n}\n\nmainFunction();\n"
+        }
+    ]
+}
