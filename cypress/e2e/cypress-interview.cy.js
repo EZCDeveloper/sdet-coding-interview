@@ -2,12 +2,13 @@
 
 import { beVisible } from '../support/Basics/constants';
 import { simpleHtmlAutomationPage } from '../support/basics/htmlPage';
+import { getSalaryAmount } from '../support/getElementId';
 
 describe('Cypress interview', () => {
-  it('TC01_Locate the salary table', () => {
-    const { htmlTableUniqueIdTitle, htmlTableUniqueId } =
-      simpleHtmlAutomationPage;
+  const { htmlTableUniqueIdTitle, htmlTableUniqueId } =
+    simpleHtmlAutomationPage;
 
+  it('TC01_Locate the salary table', () => {
     cy.visit('/');
     cy.contains('h2', htmlTableUniqueIdTitle).should(beVisible);
     cy.get('[id="htmlTableId"]').as('table1').contains(htmlTableUniqueId[0]);
@@ -16,10 +17,7 @@ describe('Cypress interview', () => {
   });
 
   it('TC02_Locate the salary table, with Custom Commands', () => {
-    const { htmlTableUniqueIdTitle, htmlTableUniqueId } =
-      simpleHtmlAutomationPage;
-
     cy.visit('/');
-    cy.get('[id="htmlTableId"]');
+    getSalaryAmount(htmlTableUniqueId);
   });
 });
