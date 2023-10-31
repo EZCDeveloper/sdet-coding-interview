@@ -1,1 +1,12 @@
-/node_modules
+cypress/integration/examples
+cypress.env.json
+node_modules
+
+/cypress/videos
+/cypress/screenshots
+./cypress/downloads/*
+./cypress/reports/*
+.vscode
+.idea
+.npmrc
+/.lh
