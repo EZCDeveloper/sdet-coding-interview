@@ -53,7 +53,11 @@ function foo(colorType: any) {
   return result;
 }
 
-//TODO: move to utils. Clean code.
+//TODO: move to utils. Clean code:
+// Step 1: Create a new function like: "createUser" in order to encapsulate the logic of "creation of users"
+// Step 2: use "const" instead of "let"
+// Step 3: create an Array called "userList" instead of calling "push" continuosly
+// Step 4: create a "loop" for restablishing all "null users" instead of making manually.
 function mainFunction() {
   let user1: any = CREATE_template_Function('Maria', 1, true);
   sleep(3000);
